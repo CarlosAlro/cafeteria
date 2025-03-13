@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'outfit', sans-serif;
+    -moz-box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(227, 206, 174);
+   
+}
+
+
+header{
+    border: 5px solid rgb(186, 25, 170);
+
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+
+    background-image:url(./imagemfundo.jpg);
+    background-size:cover;
+    position: relative;
+
+    height: 550px;
+
+}
+
+.titulo{
+    border: 5px solid rgb(15, 67, 35);
+
+    text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+    color: rgb(225, 213, 195);
+    
+    height: 550px;
+    text-align: center;
+}
+.subtitulo{
+    border: 4px solid rgb(20, 133, 63);
+
+    display: flex;
+    gap: 170px;
+    justify-content:center;
+    margin-top:50px ;
+    padding-bottom: 10px;
+    transform: scaleY(1.5);
+}
+.titulo h1{
+    border: 3px solid rgb(75, 221, 109);
+
+    margin-top:100px;
+
+    font-size: 100px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style:normal;
+    transform: scaleY(3.0);
+}
+.imgPrin{
+    border: 5px solid blue;
+    
+    top: 0;
+    position: absolute;
+    margin: auto;
+    z-index: 9;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    left: 52%
+
+        
+}
+
+                                        /* menu lateral */
+nav.menu-lateral{
+    width: 75px;
+    height: 100%;
+    background-color: rgb(37, 27, 27);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 rgba(224, 213, 195, 0.692);
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow:hidden;
+    transition: .5s;
+}
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.btn-expandir > i{
+    color: white;
+    font-size: 28px;
+    cursor: pointer; 
+}
+ul{
+    height: 100%;
+    list-style-type:none;
+}
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.ativo{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(227, 206, 174, 0.692);
+}
+
+ul li.item-menu:hover{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgba(227, 206, 174, 0.692);
+
+}
+ul li.item-menu a{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+    white-space: nowrap;
+}
+ul li.item-menu a .txt-link{
+    margin-left: 70px;
+    transition: .7s;
+    opacity: 1;
+}
+nav.menu-lateral.expandir .txt-link{
+    margin-left: 40px;
+
+}
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 10px;
+}
+                                                         /* fim do menu lateral */
+                     /* inicio do menu de login */
+
+ nav.menu-login{
+    background-color: rgb(37, 27, 27);
+    border-radius: 5px;
+    padding: 8px;
+
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    right: 25px;
+    transition:.3s;
+}
+nav.menu-login a{
+    border: 2px solid rgb(22, 89, 47);
+
+    text-decoration: none;
+    color: rgb(225, 213, 195);
+    padding:8px;
+    
+}
+nav.menu-login:hover{
+    background-color: rgba(225, 213, 195, 0.605);
+}
+nav.menu-login a:hover{
+    text-shadow: 0 0 5px black;
+}
+
+.sociais{
+    border: 1px solid rgb(107, 49, 49);
+
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+    
+}
+.sociais ul{
+    border: 1px solid rgb(107, 49, 49);
+
+    display: flex;
+    gap: 30px;
+    font-size:35px;
+}
+.sociais ul li a{
+    border: 1px solid rgb(107, 49, 49);
+
+    border-radius: 20px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(227, 206, 174);
+    transition: .5s;
+}
+.sociais ul li a:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.457);
+}
+ 
+main{
+    border: 2px solid rgb(142, 90, 12);
+
+    background-color: rgb(227, 206, 174);
+    display: flex;
+    justify-content: center;
+    padding: 80px 100px ;
+    
+}
+ 
+
+/* seleçao dos produtos */
+.card-prod{
+    border: 5px solid rgb(23, 61, 201);
+
+    display:flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    
+    height: 500px;
+
+}
+/*seleçao de cada produto individual */
+.card:hover{
+    border: 3px solid rgb(107, 17, 233);
+    margin-top: 0;
+    margin-bottom: 40px;
+
+}
+.card{
+    border: 3px solid rgb(62, 54, 73);
+
+    display:flex ;
+
+    flex-direction: column;
+    align-items: center;
+    min-width: 25%;
+
+    margin-top: 50px;
+
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow:4px 4px 5px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow:4px 4px 5px -5px rgba(0,0,0,0.75);
+
+    background-color: rgb(176, 145, 110);
+    padding: 0.5rem;
+
+    transition: all 0.3s ease-in-out;
+    
+}
+
+/*seleçao de cada imagem individual */
+.card-prod .card .product{
+    border: 2px solid rgb(21, 157, 46);
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    
+    object-fit:cover;
+}
+
+/* selecao de cada like */
+.card-prod .card .like{
+    border: 2px solid rgb(49, 204, 78);
+
+    display: flex;
+    place-self: flex-end;
+    transition: .3s all ease;
+
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.card-prod .card .like:hover{
+    color: red;
+}
+.card-prod .card .title-card{
+    border: 2px solid rgb(37, 78, 103);
+    
+    color: #292929;
+    font-weight:normal;
+    font-size: 20px;
+    margin:0 0.5px 0;
+}
+
+.card-prod .card .rating{
+    border: 2px solid rgb(83, 213, 107);
+
+    font-size: 20px;
+    color: #ffc002;
+}
+.card-prod .card .price{
+    border: 2px solid rgb(198, 83, 213);
+
+    display: flex;
+    gap: 10px;
+    margin: 0.5rem 0;
+
+    font-weight: normal;
+}
+.card-prod .card .price h5:first-child{
+    border: 2px solid rgb(83, 213, 211);
+
+    color: rgb(78, 78, 78);
+    text-decoration: line-through;
+    font-weight: normal;
+    
+}
+.card-prod .card .price h5:last-child{
+    border: 2px solid rgb(16, 3, 30);
+
+    font-weight: normal;
+    color: rgb(21, 21, 21);
+}
+
+.card-prod .card a.add-carrinho{
+    border: 2px solid rgb(83, 213, 211);
+
+    border: 1px solid #4b6c17;
+    border-radius:30px ;
+    color: #4b6c17;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.card-prod .card a.add-carrinho:hover{
+    border: 2px solid rgb(83, 213, 211);
+
+    background-color: #4b6c17;
+    color: white;   
+}
+
+.btn-voltar,.btn-proximo {
+
+    position: absolute;
+
+    transform: translateY(-50%);
+    background: rgb(176, 145, 110);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10%;
+    z-index: 10;
+}
+ 
+.btn-voltar {
+    border: 2px solid rgb(13, 82, 80);
+
+    right: 50px;
+}
+
+.btn-proximo {
+    border: 2px solid rgb(13, 82, 80);
+
+    right: 0px;
+
+}
+
+.btn-voltar:hover,.btn-proximo:hover {
+    background: rgb(37, 27, 27);
+} 
+
+footer{
+    border: 3px solid rgb(64, 157, 197);
+
+    background-image:url(./imagemfundo.jpg);
+    /* filter: brightness(50%); */
+    background-size:cover;
+    position: relative;
+}
+footer h2{
+    border: 3px solid rgb(176, 13, 13);
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color:white;
+    padding: 20px;
+}
+footer .sobre-nos{
+    border: 3px solid rgb(92, 176, 13);
+    
+    display: flex;
+    justify-content: center;
+}
+
+/* footer .sob-img{
+    /* border: 3px solid rgb(176, 146, 13); 
+}*/
+
+
+footer .sob-txt{
+    border: 3px solid rgb(228, 228, 32);
+
+    width: 800px;
+    text-shadow:-3px -3px 3px rgba(0, 0, 0, 0.382);
+
+}
+footer .sob-txt h3{
+    border: 3px solid rgb(176, 13, 75);
+
+    color:rgb(210, 182, 151);
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    font-size: 40px;
+    padding-top: 10px;
+
+    text-shadow: 
+    -3px -3px 3px rgba(0, 0, 0, 0.382);
+}
+footer .sob-txt p{
+    border: 3px solid rgb(130, 13, 176);
+    
+    color:rgb(214, 196, 175);
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    font-size: 25px;
+
+    text-shadow:-3px -3px 3px rgba(0, 0, 0, 0.382);
+}
+footer .sob-txt h1{
+    border: 3px solid rgb(13, 176, 160);
+
+    color:rgb(195, 175, 153);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style:normal;
+    font-size: 120px;
+    padding-left: 10px;
+
+    text-shadow: 
+    -3px -3px 3px rgba(0, 0, 0, 0.382);
+}
+.curtido{
+    background-image: url('curtido.png');
+}
+
+.popup {
+  background-color: rgb(51, 39, 39);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  max-width: 400px;
+  padding: 40px;
+
+  color:rgb(231, 220, 207);
+  border: 1px solid #cccccc57;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.338);
+
+  z-index: 1000;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+.popup button[type="submit"],
+.popup button[type="button"] {
+    margin-top: 10px;
+    padding: 10px;
+}
+body.overlay {
+    overflow: hidden;
+}
+
+.overlay-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px);
+    z-index: 999;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+}
+
+.popup label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.popup input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.popup button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(176, 145, 110);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: rgb(108, 95, 79);
+    box-shadow: inset 0px 4px 8px rgba(146, 142, 142, 0.282);
+}
+
+#dadosCadastrados {
+    display: none;
+}
+
+
+ /* Contêiner do letreiro */
+ .mensagem {
+
+
+    top: 0%;
+    width: 100%; /* O letreiro ocupa toda a largura da tela */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
+    position: absolute;
+}
+
+/* Estilo do texto */
+.mensagem h2 {
+    display: inline-block;
+    white-space: nowrap; /* Impede o texto de quebrar em várias linhas */
+    animation: letreiro 40s linear infinite; /* A animação */
+    padding-right: 2px; /* Adiciona espaço à direita */
+}
+
+/* Duplicando o texto para que o próximo comece imediatamente */
+.mensagem h2 span {
+    display: inline-block;
+}
+
+/* Definição da animação */
+@keyframes letreiro {
+    0% {
+        transform: translateX(100%); /* Começa fora da tela à direita */
+    }
+    50% {
+        transform: translateX(0); /* Chega ao meio da tela */
+    }
+    100% {
+        transform: translateX(-100%); /* Vai até fora da tela à esquerda */
+    }
+}
+
+.mensagem h2 {
+    word-spacing: 30px; /* Adiciona espaçamento entre as palavras */
+}

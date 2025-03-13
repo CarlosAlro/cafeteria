@@ -1,0 +1,15 @@
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; 
+    margin: auto;
+}
+
+.card {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 20px;
+    background: lightblue;
+    border: 1px solid #ddd;
+}

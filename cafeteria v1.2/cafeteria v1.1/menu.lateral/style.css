@@ -1,0 +1,35 @@
+/* Estilo básico do menu */
+.menu-lateral {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    transition: width 0.3s ease; /* Faz a transição ao expandir ou reduzir */
+  }
+  
+  /* Estilo quando o menu está expandido */
+  .menu-lateral.expandir {
+    width: 400px; /* O menu vai ficar maior */
+  }
+  
+  /* Estilo para os itens do menu */
+  .item-menu {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo para o item ativo */
+  .item-menu.ativo {
+    background-color: #aaa;
+    font-weight: bold;
+  }
+  
+  /* Estilo do botão */
+  #btn-expan {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
